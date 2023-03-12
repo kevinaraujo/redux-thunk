@@ -6,8 +6,9 @@ const categoriasSlice = createSlice({
   name: 'categorias',
   initialState,
   reducers: {
-    addCategorias: (state, { payload }) => {
-        state.push(...payload)
+    addCategorias: (state, action) => {
+        console.log(action)
+        state.push(...action.payload)
     }
   }
 });
